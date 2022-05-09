@@ -1,0 +1,18 @@
+[Unit]
+Description=Gunicorn daemon <YOUR-PROJECT>
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+EnvironmentFile=/home/ubuntu/.env
+WorkingDirectory=/home/ubuntu/<YOUR-PROJECT>
+ExecStart=/home/ububtu/<YOUR-PROJECT>/env/bin/gunicorn \
+--access-logfile - \
+--workers 3 \
+--bind unix:/run/gunicorn.sock \
+<YOUR-PROJECT-APP-NAME>.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
