@@ -13,7 +13,7 @@ sudo apt-get update
 ```bash
 sudo apt install python3-pip python3-dev python3-venv libpq-dev postgresql postgresql-contrib nginx gunicorn curl
 ```
-* Then enable firewall for nginx and openssh.
+* Then enable firewall for nginx and openssh(Optional).
 ```bash
 sudo ufw enable
 sudo ufw allow OpenSSH
