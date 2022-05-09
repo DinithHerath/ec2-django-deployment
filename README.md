@@ -80,7 +80,7 @@ python manage.py collectstatic
 ``` 
 * Create a superuser to django.
 ```bash
-python manage.py createuser
+python manage.py createsuperuser
 ```
 
 ## 5. Configuring Gunicorn
