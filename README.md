@@ -68,19 +68,19 @@ source env/bin/activate
 pip install wheel gunicorn
 pip install -r requirements.txt
 ```
+* Add the .env file content to the server environment(Keep no spaces in variable value assigning) and restart shell.
+```bash
+sudo nano /etc/environment
+```
 * Then do the migrations for django.
 ```bash
 python manage.py makemigrations
 python manage.py migrate
-python manage.py collectstatics
+python manage.py collectstatic
 ``` 
 * Create a superuser to django.
 ```bash
 python manage.py createuser
-```
-* Finally add the .env file content to the server environment(Keep no spaces in variable value assigning).
-```bash
-sudo nano /etc/environment
 ```
 
 ## 5. Configuring Gunicorn
